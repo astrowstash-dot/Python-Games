@@ -48,3 +48,47 @@ if count==4:
 
 print (f'You got {count} correct answers, thanks for playing') 
 print(f'You scored {(count/4)*100}%')
+
+
+# improved
+def quiz_game():
+    asking = input("Hey, would you like to play? (yes/no): ").strip().lower()
+    if asking not in ["yes", "y"]:
+        print("Game stopped. Goodbye!")
+        return
+
+    print("Let's play! 🎉")
+    count = 0
+
+    # List of questions and answers
+    questions = [
+        ("What does CPU stand for?", "central processing unit"),
+        ("Full form of NASA?", "national aeronautics and space administration"),
+        ("What does IDE stand for?", "integrated development environment"),
+        ("What does VCS stand for?", "version control system"),
+    ]
+
+    # Loop through questions
+    for q, ans in questions:
+        print(q)
+        user_answer = input().strip().lower()
+        if user_answer == ans:
+            print("✅ Correct!")
+            count += 1
+        else:
+            print("❌ Incorrect")
+
+    # Final score
+    print("\n--- Results ---")
+    print(f"You got {count} out of {len(questions)} correct answers.")
+    score = (count / len(questions)) * 100
+    print(f"Your score: {score:.2f}%")
+
+    if count == len(questions):
+        print("🎉 Congrats! You nailed all the answers!")
+    elif count >= len(questions)//2:
+        print("👍 Good job, keep practicing!")
+    else:
+        print("💡 Keep learning, you'll get better next time!")
+
+quiz_game()
