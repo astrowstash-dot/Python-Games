@@ -8,4 +8,14 @@ def scramble_word(word):
 
 
 # List of words to scramble
-WORDS = ["python", "developer", "hangman", "heisenberg", "mike", "heyyo", "saulgoodman", "breakingbad"]
+
+def play_game():
+    WORDS = ["python", "developer", "hangman", "heisenberg", "mike", "heyyo", "saulgoodman", "breakingbad"]
+    score = 0
+    print("Welcome to Word Scramble!")
+    print("Unscramble the letters to form the correct word.\n")
+
+
+
+
+
