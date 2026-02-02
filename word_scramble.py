@@ -10,12 +10,13 @@ def scramble_word(word):
 # List of words to scramble
 
 def play_game():
+
     WORDS = ["python", "developer", "hangman", "heisenberg", "mike", "heyyo", "saulgoodman", "breakingbad"]
     score = 0
     print("Welcome to Word Scramble!")
     print("Unscramble the letters to form the correct word.\n")
 
-    for word in words:
+    for word in WORDS:
         scrambled = scramble_word(word)
         print(f"Scrambled word: {scrambled}")
         guess = input("Your guess: ").strip().lower()
@@ -26,7 +27,10 @@ def play_game():
         else:
             print(f"❌ Wrong. The word was: {word}\n")
 
-    print(f"Game over! Your score: {score}/{len(words)}")
+    print(f"Game over! Your score: {score}/{len(WORDS)}")
+if __name__ == "__main__":
+    play_game()
+
 
 
 
