@@ -14,4 +14,13 @@ def maze_game():
         [".", ".", ".", "X", "."]
     ]
 
+# Player starting position
+    player_pos = [0, 0]
+
+    def print_maze():
+        for i in range(len(maze)):
+            row = ""
+            
+
+
     
