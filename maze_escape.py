@@ -20,6 +20,13 @@ def maze_game():
     def print_maze():
         for i in range(len(maze)):
             row = ""
+            for j in range(len(maze[i])):
+                if [i, j] == player_pos:
+                    row += "P "   # Player
+                else:
+                    row += maze[i][j] + " "
+            print(row)
+        print()
             
 
 
