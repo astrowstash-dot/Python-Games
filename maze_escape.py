@@ -27,6 +27,12 @@ def maze_game():
                     row += maze[i][j] + " "
             print(row)
         print()
+# Game loop
+    while True:
+        print_maze()
+        move = input("Move (w=up, s=down, a=left, d=right): ").lower()
+
+        new_pos = player_pos.copy()
             
 
 
