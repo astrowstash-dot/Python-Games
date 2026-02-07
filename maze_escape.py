@@ -33,7 +33,18 @@ def maze_game():
         move = input("Move (w=up, s=down, a=left, d=right): ").lower()
 
         new_pos = player_pos.copy()
-            
+        if move == "w":
+            new_pos[0] -= 1
+        elif move == "s":
+            new_pos[0] += 1
+        elif move == "a":
+            new_pos[1] -= 1
+        elif move == "d":
+            new_pos[1] += 1
+        else:
+            print("Invalid move! Use w/a/s/d.\n")
+            continue
+    
 
 
     
