@@ -44,6 +44,10 @@ def maze_game():
         else:
             print("Invalid move! Use w/a/s/d.\n")
             continue
+        # Check boundaries
+        if not (0 <= new_pos[0] < len(maze) and 0 <= new_pos[1] < len(maze[0])):
+            print("🚫 You can't move outside the maze!\n")
+            continue
     
 
 
