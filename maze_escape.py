@@ -48,6 +48,15 @@ def maze_game():
         if not (0 <= new_pos[0] < len(maze) and 0 <= new_pos[1] < len(maze[0])):
             print("🚫 You can't move outside the maze!\n")
             continue
+        # Check walls
+        if maze[new_pos[0]][new_pos[1]] == "X":
+            print("🚧 There's a wall there!\n")
+            continue
+        # Update position
+        player_pos = new_pos
+
+
+
     
 
 
