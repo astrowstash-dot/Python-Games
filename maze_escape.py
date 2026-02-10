@@ -54,6 +54,18 @@ def maze_game():
             continue
         # Update position
         player_pos = new_pos
+        # Check exit
+        if maze[player_pos[0]][player_pos[1]] == "E":
+            print_maze()
+            print("🎉 Congratulations! You found the exit!")
+            break
+
+
+# Run the game
+maze_game()
+
+
+
 
 
 
